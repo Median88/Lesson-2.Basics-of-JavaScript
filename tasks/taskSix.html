@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>#6</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css" />
+</head>
+
+<body>
+    <p>Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций и вернуть полученное значение (использовать switch).</p>
+    <p>
+        <a href="javascript:void(0);" onclick="taskSix();">Запустить задачу №6</a>
+    </p>
+    <script>
+        function taskSix() {
+            var a = +prompt('Введите значение переменной "a"'),
+                b = +prompt('Введите значение переменной "b"'),
+                operation = prompt('Введите необходимую операцию "+", "-", "*", "/"'),
+                result;
+
+            function operationAddition(a, b) {
+                return a + b;
+            }
+
+            function operationSubtraction(a, b) {
+                return a - b;
+            }
+
+            function operationMultiplication(a, b) {
+                return a * b;
+            }
+
+            function operationDivision(a, b) {
+                return a / b;
+            }
+
+            function mathOperation(a, b, operation) {
+                switch (operation) {
+                    case ("+"):
+                        return operationAddition(a, b);
+                    case ("-"):
+                        return operationSubtraction(a, b);
+                    case ("*"):
+                        return operationMultiplication(a, b);
+                    case ("/"):
+                        return operationDivision(a, b);
+                    default:
+                        return "Неправильно введена арифметическая операция!";
+                }
+            }
+            alert('a = ' + a +
+                '\nb = ' + b +
+                '\nоперация: ' + operation +
+                '\nрезультат: ' + mathOperation(a, b, operation));
+        }
+    </script>
+
+
+</body>
+
+</html>

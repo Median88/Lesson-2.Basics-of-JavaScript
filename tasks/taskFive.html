@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>#5</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css" />
+</head>
+
+<body>
+    <br>Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return
+    <br> <a href="javascript:void(0);" onclick="taskFive();">Запустить выполнение задачи №5</a>
+    <p>Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.</p>
+
+    <script>
+        function taskFive() {
+            var a = Math.floor(Math.random() * 100),
+                b = Math.floor(Math.random() * 100);
+
+            function operationAddition(a, b) {
+                return a + b;
+            }
+
+            function operationSubtraction(a, b) {
+                return a - b;
+            }
+
+            function operationMultiplication(a, b) {
+                return a * b;
+            }
+
+            function operationDivision(a, b) {
+                return a / b;
+            }
+            alert('a (random) = ' + a +
+                '\nb (random) = ' + b +
+                '\na + b = ' + operationAddition(a, b) +
+                '\na - b = ' + operationSubtraction(a, b) +
+                '\na * b = ' + operationMultiplication(a, b) +
+                '\na / b = ' + operationDivision(a, b).toFixed(4));
+        }
+    </script>
+</body>
+
+</html>
